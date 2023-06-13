@@ -1,0 +1,248 @@
+*{
+margin: 0 auto;
+padding: 0;
+box-sizing: border-box;
+}
+body{
+    background-color: #212529;
+}
+
+#nav-bar{
+display: flex;
+justify-content: center;
+align-items: center;
+box-shadow: 0px 5px 10px #40E0D0;
+background-color: #212529;
+}
+#nav-bar ul li a{
+color: #40E0D0;
+transition: 0.4s all;
+border-radius: 2px;
+}
+#nav-bar ul li a:hover{
+color: #252b2e;
+background-color: #40E0D0;
+box-shadow: 0 0 10px #40E0D0,0 0 40px #40E0D0, 0 0 80px #40E0D0;
+}
+
+#logo img{
+position: absolute;
+top: -62%;
+right: 100%;
+}
+#body-inicial{
+display: flex;
+height: 95vh;
+align-items: center;  
+justify-content: space-around;
+}
+@keyframes animation1{
+	0%,100%{
+		transform:translateY(15px)
+	}
+	50%{
+		transform:translateY(-15px)
+	}
+}
+#img-body-icial{
+animation: animation1 5s ease-in-out infinite;
+}
+#texto1-body-inicial{
+    width: 14ch;
+    color: #40E0D0;
+    transition: all 0.4s;
+}
+#texto1-body-inicial h3{
+    width: 14ch;
+    font-family: "OCR A Std", monospace;
+}
+@keyframes digitando{
+    0%{
+        width: 0ch;
+    }
+    100%{
+        width: 14ch;
+    }
+}
+@keyframes piscando{
+    50%{
+        border-color: transparent;
+    }
+}
+#maquina-de-escrever{
+    font-family: monospace;
+    font-size: 50px;
+    border-right: 4px solid;
+    width: 14ch;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: digitando 2s steps(14), piscando 0.5s infinite alternate step-end;
+}
+
+.textos{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+}
+#github-img{
+width: 40px;
+height: 40px;
+display: flex;
+justify-content: center;
+align-items: center;
+border: 2px solid #40E0D0;
+border-radius: 10px;
+transition: 1.5s all;
+margin-left: -0.1rem;
+}
+#github-img:hover{
+    background-color: #40E0D0;
+}
+#conteudo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+#conteudo img{
+    height: 60vh;
+    border: 3px solid black;
+    border-radius: 10%;
+    transition: 1.5s all;
+}
+#sobre-mim{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;;
+}
+#btn-misterio{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    height: 45vh;
+    width: 44vw;
+    position: relative;
+}
+#btn-misterio p{
+    width: 40vw;
+    display: none;
+    color: #40E0D0;
+    border: 3px solid black;
+    transition: all 0.2;
+}
+#botao-desaparecer{
+z-index: 1;
+position: absolute;
+top: 0;
+left: 4%;
+border: 3px solid black;
+color: #40E0D0;
+}
+#habilidades{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#imgs{
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+#imgs img{
+height: 90px;
+}
+#col1{
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#col2{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+ 
+}
+#texto-modificavel-body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 60vh;
+  width: 70vw;
+}
+#texto-modificavel-body p{
+  font-family:Arial, Helvetica, sans-serif;
+  color: #40E0D0;
+  font-weight: bold;
+}
+.col-sm .img-fluid{
+    height: 100px;
+    border: 3px solid black;
+    border-radius: 15px;
+    transition: 0.4s all;
+}
+.col-sm .img-fluid:hover{
+    background-color: white;
+}
+#projetos{
+    height: 110vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#pagina-profissional{
+    width: 40vw;
+    display: flex;
+    box-shadow: 0 0 15px 5px white;
+    flex-wrap: wrap;
+    height: 86vh;
+}
+#pagina-profissional:hover{
+    box-shadow: 0 0 15px 5px #40E0D0;
+}
+#calculadora{
+    width: 40vw;
+    display: flex;
+    box-shadow: 0 0 15px 5px white;
+    flex-wrap: wrap;
+    height: 86vh; 
+}
+#calculadora:hover{
+    box-shadow: 0 0 15px 5px #40E0D0;
+}
+.card-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+@media(max-width: 1024px) {
+   #img-programing{
+    height: 200px;
+   } 
+}
+@media(max-width: 768px) {
+    #img-programing{
+     height: 130px;
+     margin-left: 130px;
+    } 
+    #calculadora{
+        height: 100vh;
+    }
+    #pagina-profissional{
+        height: 100vh;
+    }
+    #p-modal{
+        margin-top:130px;
+    }
+    #botao-desaparecer{
+        top: -30px;
+        left: 5%;
+        width: 40vw;
+    }
+ }
